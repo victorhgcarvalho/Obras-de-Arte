@@ -1,0 +1,132 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #111;
+  color: #fff;
+  text-align: center;
+}
+
+.title {
+  margin-top: 40px;
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+}
+
+.gallery-container {
+  padding: 20px;
+}
+
+.gallery, .surpresa {
+  display: flex;
+  flex-direction: column; /* novo */
+  align-items: center;    /* centraliza horizontalmente */
+  gap: 40px;              /* mais espaço entre as obras */
+  margin: 40px 0;
+}
+
+.surpresa img {
+  transform: rotateY(90deg);
+  transition: transform 0.8s ease, opacity 0.8s ease;
+}
+
+.surpresa.show img {
+  transform: rotateY(0);
+}
+
+
+
+.obra {
+  width: 90%;
+  max-width: 300px;
+  box-shadow: 0 15px 30px rgba(255, 255, 255, 0.1);
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  border-radius: 10px;
+  opacity: 1;
+}
+
+button#btnSurpresa {
+  background-color: #c62828;
+  border: none;
+  padding: 14px 24px;
+  font-size: 1rem;
+  color: #fff;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button#btnSurpresa:hover {
+  background-color: #ff5252;
+}
+
+.hidden {
+  opacity: 0;
+  transform: translateY(20px);
+  pointer-events: none;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: all;
+}
+
+
+.sobre {
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+
+
+footer {
+  background-color: #111;
+  padding: 20px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+
+.obra:hover {
+  transform: scale(1.03) rotateZ(0.5deg);
+  box-shadow: 0 20px 40px rgba(255, 255, 255, 0.15);
+  transition: all 0.4s ease;
+}
+
+
+
+.assinatura {
+  font-family: 'Brush Script MT', cursive;
+  font-size: 1.5rem;
+  color: #ff4d4d;
+  margin-top: 20px;
+  opacity: 0.6;
+  transition: opacity 0.4s ease;
+}
+
+.assinatura:hover {
+  opacity: 1;
+}
+
+
+.frase{
+    font-size: 1.2rem;
+}
+
+
+
+
+.art-frame:hover img {
+  transform: scale(1.05);
+}
+
+
+#particles-js {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
