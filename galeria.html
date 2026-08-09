@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nick Gallery</title>
+  <link rel="shortcut icon" href="img/download.jpeg" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="gallery.css" />
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+</head>
+<body>
+  <div id="particles-js"></div>
+
+  <main class="gallery-container">
+    <header class="gallery-header">
+      <p class="eyebrow">Coleção Particular</p>
+      <h1 class="title">Nick Gallery</h1>
+      <p class="sobre">Essas obras nascem do encontro entre o instinto criativo e a alma intensa que guia suas mãos.</p>
+      <p class="contador" id="contador">
+        <span class="contador-principal"></span>
+        <span class="contador-relogio"></span>
+      </p>
+    </header>
+
+    <section class="secao">
+      <h2 class="secao-titulo">Traços</h2>
+      <p class="secao-subtitulo">Grafite e lápis de cor</p>
+      <div class="galeria-grid">
+        <figure class="obra-item">
+          <img src="img/vangogh.jpg" alt="Retrato a grafite" class="obra hidden" data-titulo="Retrato">
+          <figcaption>Retrato</figcaption>
+        </figure>
+        <figure class="obra-item">
+          <img src="img/leonardo-da-vinci.jpeg" alt="Retrato de Leonardo da Vinci" class="obra hidden" data-titulo="Leonardo da Vinci">
+          <figcaption>Leonardo da Vinci</figcaption>
+        </figure>
+        <figure class="obra-item">
+          <img src="img/onça.jpg" alt="Onça rugindo, a grafite" class="obra hidden" data-titulo="Onça">
+          <figcaption>Onça</figcaption>
+        </figure>
+        <figure class="obra-item">
+          <img src="img/borboletas.jpg" alt="Estudo de borboletas" class="obra hidden" data-titulo="Borboletas">
+          <figcaption>Borboletas</figcaption>
+        </figure>
+        <figure class="obra-item">
+          <img src="img/estudo-cabelo.jpeg" alt="Olhar do anjo caído, estudo de cabelo e barba" class="obra hidden" data-titulo="Olhar do Anjo Caído">
+          <figcaption>Olhar do Anjo Caído</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="secao">
+      <h2 class="secao-titulo">Arte Digital</h2>
+      <p class="secao-subtitulo">Ilustração e pintura digital</p>
+      <div class="galeria-grid">
+        <figure class="obra-item">
+          <img src="img/olhos.jpeg" alt="Ilustração digital de olhos, com a frase the most beautiful eyes" class="obra hidden" data-titulo="The Most Beautiful Eyes">
+          <figcaption>The Most Beautiful Eyes</figcaption>
+        </figure>
+        <figure class="obra-item">
+          <img src="img/retrato-anime.jpeg" alt="Retrato digital em estilo anime" class="obra hidden" data-titulo="Retrato">
+          <figcaption>Retrato</figcaption>
+        </figure>
+        <figure class="obra-item">
+          <img src="img/casal-colo.jpeg" alt="Ilustração do casal em estilo Rick and Morty, ele carregando ela no colo" class="obra hidden" data-titulo="Versão Rick and Morty">
+          <figcaption>Versão Rick and Morty</figcaption>
+        </figure>
+        <figure class="obra-item">
+          <img src="img/casal-cartoon.jpeg" alt="Ilustração cartoon do casal em estilo mugshot" class="obra hidden" data-titulo="Gutierrez &amp; Shlic">
+          <figcaption>Shlic &amp; Gutierrez</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="secao surpresa-secao">
+      <button id="btnSurpresa">SURPRESA</button>
+      <div class="surpresa hidden">
+        <figure class="obra-item">
+          <img src="img/motoqueiro-fantasma.png" alt="Ghost Rider em chamas" class="obra hidden" data-titulo="Ghost Rider">
+          <figcaption>Ghost Rider</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="secao sobre-nos">
+      <h2 class="secao-titulo">Sobre Nós</h2>
+      <p class="secao-subtitulo">Lembranças</p>
+      <div class="galeria-grid momentos-grid">
+        <figure class="obra-item">
+          <img src="img/momentos/aniversario.jpeg" alt="Victor e a namorada em uma festa de aniversário" class="obra hidden" data-titulo="Aniversário">
+          <figcaption>Aniversário</figcaption>
+        </figure>
+        <figure class="obra-item">
+          <img src="img/momentos/risadas.jpeg" alt="Victor e a namorada rindo em casa" class="obra hidden" data-titulo="Risadas">
+          <figcaption>Risadas</figcaption>
+        </figure>
+        <figure class="obra-item">
+          <img src="img/momentos/treino.jpeg" alt="Victor e a namorada abraçados na academia" class="obra hidden" data-titulo="Treino">
+          <figcaption>Treino</figcaption>
+        </figure>
+        <figure class="obra-item">
+          <img src="img/momentos/dupla.jpeg" alt="Victor e a namorada posando juntos no espelho da academia" class="obra hidden" data-titulo="Dupla">
+          <figcaption>Dupla</figcaption>
+        </figure>
+        <figure class="obra-item">
+          <img src="img/momentos/beijo.jpeg" alt="Victor beijando a testa da namorada" class="obra hidden" data-titulo="Beijo">
+          <figcaption>Beijo</figcaption>
+        </figure>
+        <figure class="obra-item">
+          <img src="img/momentos/nos-dois.jpeg" alt="Selfie de Victor e a namorada sorrindo" class="obra hidden" data-titulo="Nós Dois">
+          <figcaption>Nós Dois</figcaption>
+        </figure>
+        <figure class="obra-item">
+          <img src="img/momentos/perto.jpeg" alt="Victor e a namorada de rosto colado, bem de perto" class="obra hidden" data-titulo="Pertinho">
+          <figcaption>Pertinho</figcaption>
+        </figure>
+        <figure class="obra-item">
+          <img src="img/casal-parque.jpeg" alt="Victor e a namorada sentados no gramado de um parque" class="obra hidden" data-titulo="Um Momento Nosso">
+          <figcaption>Um Momento Nosso</figcaption>
+        </figure>
+      </div>
+    </section>
+  </main>
+
+  <div id="lightbox" class="lightbox hidden">
+    <button class="lightbox-close" aria-label="Fechar">&times;</button>
+    <img class="lightbox-img" src="" alt="">
+    <p class="lightbox-caption"></p>
+  </div>
+
+  <!-- Carta secreta -->
+  <button id="btnCarta" class="carta-trigger" aria-label="Uma cartinha pra você">💌</button>
+
+  <div id="modalCarta" class="carta-modal hidden">
+    <button class="carta-fechar" aria-label="Fechar">&times;</button>
+    <div class="envelope" id="envelope">
+      <div class="envelope-flap"></div>
+    </div>
+    <p class="envelope-dica" id="envelopeDica">toque no envelope pra abrir</p>
+    <div class="carta-conteudo hidden" id="cartaConteudo">
+      <p class="carta-texto">
+        Eu amo você. Eu amo suas artes. Eu amo estar com você.<br><br>
+        Fiz esse cantinho pra mostrar o quão especial você é para mim, e pra poder me
+        lembrar pelo que eu me esforço. Continue sendo você, e eu sempre vou te amar...
+      </p>
+    </div>
+  </div>
+
+  <!-- Rodapé -->
+  <footer>
+    <p class="frase">"Sua visão transforma o mundo em arte. Não pare de desenhar."</p>
+    <p class="assinatura">— Victor H.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

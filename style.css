@@ -1,0 +1,112 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+  overflow: hidden;
+}
+
+.intro {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.intro h1 {
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+#enterBtn {
+  padding: 15px 40px;
+  font-size: 1.2rem;
+  background-color: red;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#enterBtn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px red;
+}
+
+.curtain {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: red;
+  z-index: 2;
+  transition: left 0.7s ease;
+}
+
+.titulo {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  margin: 0;
+}
+
+.titulo.digitando::after {
+  content: '|';
+  margin-left: 4px;
+  color: #ff5252;
+  animation: blink 0.8s step-start infinite;
+}
+
+.subtitulo {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+  color: #ccc;
+}
+
+/* ---------- Fade-in escalonado após a digitação ---------- */
+
+.pos-typewriter {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.pos-typewriter.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+/* ---------- Corações flutuantes ---------- */
+
+.hearts-bg {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.heart {
+  position: absolute;
+  bottom: -40px;
+  color: #ff5252;
+  opacity: 0;
+  animation: subir var(--duracao, 9s) ease-in forwards;
+}
+
+@keyframes subir {
+  0% { transform: translate(0, 0) rotate(0deg); opacity: 0; }
+  10% { opacity: 0.8; }
+  90% { opacity: 0.6; }
+  100% { transform: translate(var(--drift, 0px), -110vh) rotate(15deg); opacity: 0; }
+}
